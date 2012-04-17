@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function demo_profile_install() {
+  include_once DRUPAL_ROOT . '/profiles/standard/standard.install';
+  standard_install();
+
+  drupal_system_enable('theme', 'andromeda');
+  variable_set('theme_default', 'andromeda');
+}
